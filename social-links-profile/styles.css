@@ -53,13 +53,16 @@ body {
 
 .content {
     margin-top: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .content > *{
     margin-bottom: 15px;
 }
 
-.content p{
+
+.content a{
     color: #fff;
     font-weight: bold;
     background-color: #474545f2;
@@ -67,9 +70,10 @@ body {
     text-align: center;
     width: 300px;
     border-radius: 8px;
+    text-decoration: none;
 }
 
-.content p:hover{
+.content a:hover{
     cursor: pointer;
     background-color: #9ced10f9;
     color: #000;
