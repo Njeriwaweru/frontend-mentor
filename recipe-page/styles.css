@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    /* font-weight: 100 900;
+    font-style: normal; */
+}
+
+@font-face {
+    font-family: 'YoungSerif';
+    src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e7d8c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    width: 490px;
+    border-radius: 15px;
+}
+
+.card img{
+    width: 450px;
+    border-radius: 10px;
+}
+
+.content > * {
+    margin-top: 10px;
+}
+
+.content h1{
+    font-size: 25px;
+    font-family: 'YoungSerif';
+}
+
+.content p{
+    font-size: 11px;
+    line-height: 17px;
+    color: #5b5b5b;
+}
+
+.preparation {
+    background-color: #fabdf537;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.preparation h2{
+    color: #772871eb;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.preparation ul{
+    padding: 10px;
+}
+
+.preparation li {
+    padding: 5px;
+    margin-left: 7px;
+    font-size: 13px;
+    color: #5b5b5b;
+}
+
+.ingredients{
+    margin-top: 20px;
+    border-bottom: 1px solid #8080805f;
+}
+
+.ingredients h2{
+    color: #985c41;
+    font-family: 'YoungSerif';
+}
+
+.ingredients ul{
+    padding: 15px;
+}
+
+.ingredients li{
+    padding: 4px;
+    margin-left: 5px;
+    font-size: 13px;
+    color: #5b5b5b;
+}
+
+.instructions{
+    margin-top: 20px;
+    border-bottom: 1px solid #8080805f;
+}
+
+.instructions h2{
+    color: #985c41;
+    font-family: 'YoungSerif';
+}
+
+.instructions ol{
+    padding: 15px;
+}
+
+.instructions li{
+    padding: 4px;
+    margin-left: 5px;
+    font-size: 11px;
+    color: #5b5b5b;
+}
+
+.instructions li::marker{
+    color: #985c41;
+    font-weight: bold;
+}
+
+.nutrition{
+    margin-top: 20px;
+}
+
+.nutrition h2{
+    color: #985c41;
+    margin-bottom: 10px;
+    font-family: 'YoungSerif';
+}
+
+.nutrition p{
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #5b5b5b;
+}
+
+.nutrition table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutrition table td{
+    padding: 8px;
+    color: #5b5b5b;
+    font-size: 12px;
+    border-bottom: 1px solid #8080805f;
+}
+
+.nutrition table td span{
+    color: #985c41;
+    font-weight: bold;
+}
+
+.nutrition table tr:last-child td {
+    border-bottom: none;
+}
+
+.attribution{
+    margin-top: 20px;
+}
