@@ -46,11 +46,11 @@ body{
     font-weight: lighter;
 }
 
-.content h2{
+.content h1{
    font-size: 20px;
 }
 
-.content h2:hover {
+.content h1:hover {
     cursor: pointer;
     color: #f4d04e;
 }
