@@ -5,7 +5,7 @@
 ## Welcome! 👋
 
 # Links
-live site [https://njeriwaweru.github.io/frontend-mentor/]
+live site [https://frontend-mentor-38ip6kdcv-praise-wawerus-projects.vercel.app/]
 
 # my-process
 # built-with
