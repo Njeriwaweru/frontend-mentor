@@ -5,7 +5,7 @@
 ## Welcome! 👋
 
 # Links
-Live site[]
+Live site[https://product-review-card-chi.vercel.app/]
 
 # my-process
 ## built-with
