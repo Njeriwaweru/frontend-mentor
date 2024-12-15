@@ -94,6 +94,9 @@ main .attribution {
   border-top: 4px solid #549ef2;
   position: relative;
 }
+.cards h3 {
+  font-weight: 600;
+}
 .cards p {
   font-size: 12px;
   line-height: 20px;
