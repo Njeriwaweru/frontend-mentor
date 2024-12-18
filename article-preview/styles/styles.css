@@ -36,7 +36,7 @@ body {
   padding: 20px;
   position: relative;
 }
-.card .content h2 {
+.card .content h1 {
   font-size: 20px;
   color: hsl(217, 19%, 35%);
   font-weight: 700;
@@ -141,7 +141,7 @@ body {
     margin-left: 0;
     margin-right: 0;
   }
-  .card .content h2 {
+  .card .content h1 {
     font-size: 18px;
     margin-top: 5px;
   }
