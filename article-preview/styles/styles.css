@@ -83,7 +83,7 @@ body {
   gap: 20px;
   margin-top: 20px;
 }
-.card .content #footer div h3 {
+.card .content #footer div h2 {
   color: hsl(217, 19%, 35%);
   font-size: 15px;
 }
