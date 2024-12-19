@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// Variables
+$primaryColor: #ff6257;
+$darkSlateGrey: #242742;
+$charcoalGrey: #36384e;
+$grey: #9294a0;
+$white: #ffffff;
+$fontsize: 16px;
+$fontFamily: "Roboto", serif;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $charcoalGrey;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $fontFamily;
+    overflow-x: hidden;
+}
+
+button{
+    margin-top: 20px;
+    width: 370px;
+    height: 55px;
+    background-color: $darkSlateGrey;
+    color: $white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+button:hover{
+    background-color: $primaryColor;
+}
+
+#card{
+    background-color: $white;
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 75px;
+    height: auto;
+    .card__content{
+        display: flex;
+        .card__text{
+            width: 50%;
+            padding: 30px;
+            margin-top: 20px;
+            margin-left: 20px;
+            h1{
+                font-weight: 700;
+                font-size: 50px;
+                color: $darkSlateGrey;
+            }
+            p{
+                margin-top: 20px;
+                font-size: $fontsize;
+                font-weight: 400;
+                color: $darkSlateGrey;
+            }
+            .card__list{
+                margin-top: 20px;
+                li{
+                    list-style-type: none;
+                    margin-bottom: 15px;
+                    color: $darkSlateGrey;
+                }
+                .card__icon{
+                    margin-right: 15px;
+                    
+                }
+            }
+            #signupForm{
+                margin-top: 20px;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    span{
+                        display: flex;
+                        position: relative;
+                        margin-bottom: 4px;
+                        label{
+                            font-size: 12px;
+                            font-weight: 700;
+                        }
+                        .formField__message{
+                            font-size: 12px;
+                            font-weight: 700;
+                            position: absolute;
+                            right: 20px;
+                        }
+                    }
+                    input{
+                        border-radius: 8px;
+                        height: 25px;
+                        border: 1px solid $grey;
+                        padding: 10px;
+                        cursor: pointer;
+                        width: 345px;
+                    }
+                }
+            }
+        }
+        .card__image{
+            width: 50%;
+            height: 500px;
+        }
+    }
+
+    #successCard{
+       padding: 20px;
+       width: 300px;
+       min-height: 100px;
+        .successCard__icon{
+            width: 40px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+        h1{
+            font-size: 35px;
+            color: $darkSlateGrey;
+            margin-bottom: 20px;
+        }
+        p{
+            color: $darkSlateGrey;
+            font-size: 13px;
+        }
+        .sucessCard__button{
+            width: 300px;
+            height: 45px;
+        }
+    }
+}
+
+.attribution{
+    margin-top: 50px;
+    font-size: 11px;
+    color: $white;
+}
+
+@media (max-width: 48rem) {
+    #card{
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        .card__content{
+            .card__text{
+                padding: 5px;
+                margin-left: 0;
+                h1{
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 14px;
+                }
+                .card__list{
+                    li{
+                        margin-bottom: 5px;
+                        font-size: 14px;
+                    }
+                    .card__icon{
+                        margin-right: 15px;
+                        
+                    }
+                }
+                #signupForm{
+                    input{
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 30rem) {
+    body{
+        height: 100%;
+    }
+    #card{
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .card__content{
+            flex-direction: column;
+            width: 100%;
+            padding: 20px;
+            background-color: $white;
+            .card__text{
+               width: 100%;
+               padding-left: 10px;
+               padding-right: 10px;
+               h1{
+                font-size: 40px;
+               }
+               p{
+                font-size: 17px;
+               }
+               .card__list{
+                li{
+                    padding-bottom: 5px;
+                    font-size: 17px;
+                    padding-right: 20px;
+                }
+               }
+            }
+            .card__image{
+                order: -1;
+                width: 100%;
+                object-fit: cover;
+                height: 300px;
+                border-radius: 0 0 20px 20px;
+            }
+            
+        }
+        #successCard{
+            position: fixed;
+            background-color: $white;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            .successCard__icon{
+                margin-top: 100px;
+                width: 50px;
+                height: 50px;
+            }
+            h1{
+                font-size: 40px;
+            }
+            p{
+                margin-right: 80px;
+                font-size: 15px;
+            }
+            .sucessCard__button{
+                margin-top: 150px;
+            }
+        }
+    }
+    .attribution{
+        display: none;
+    }
+}

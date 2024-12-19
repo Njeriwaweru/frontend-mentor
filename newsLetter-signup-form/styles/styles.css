@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #36384e;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", serif;
+  overflow-x: hidden;
+}
+
+button {
+  margin-top: 20px;
+  width: 370px;
+  height: 55px;
+  background-color: #242742;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff6257;
+}
+
+#card {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 75px;
+  height: auto;
+}
+#card .card__content {
+  display: flex;
+}
+#card .card__content .card__text {
+  width: 50%;
+  padding: 30px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#card .card__content .card__text h1 {
+  font-weight: 700;
+  font-size: 50px;
+  color: #242742;
+}
+#card .card__content .card__text p {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #242742;
+}
+#card .card__content .card__text .card__list {
+  margin-top: 20px;
+}
+#card .card__content .card__text .card__list li {
+  list-style-type: none;
+  margin-bottom: 15px;
+  color: #242742;
+}
+#card .card__content .card__text .card__list .card__icon {
+  margin-right: 15px;
+}
+#card .card__content .card__text #signupForm {
+  margin-top: 20px;
+}
+#card .card__content .card__text #signupForm div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#card .card__content .card__text #signupForm div span {
+  display: flex;
+  position: relative;
+  margin-bottom: 4px;
+}
+#card .card__content .card__text #signupForm div span label {
+  font-size: 12px;
+  font-weight: 700;
+}
+#card .card__content .card__text #signupForm div span .formField__message {
+  font-size: 12px;
+  font-weight: 700;
+  position: absolute;
+  right: 20px;
+}
+#card .card__content .card__text #signupForm div input {
+  border-radius: 8px;
+  height: 25px;
+  border: 1px solid #9294a0;
+  padding: 10px;
+  cursor: pointer;
+  width: 345px;
+}
+#card .card__content .card__image {
+  width: 50%;
+  height: 500px;
+}
+#card #successCard {
+  padding: 20px;
+  width: 300px;
+  min-height: 100px;
+}
+#card #successCard .successCard__icon {
+  width: 40px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+#card #successCard h1 {
+  font-size: 35px;
+  color: #242742;
+  margin-bottom: 20px;
+}
+#card #successCard p {
+  color: #242742;
+  font-size: 13px;
+}
+#card #successCard .sucessCard__button {
+  width: 300px;
+  height: 45px;
+}
+
+.attribution {
+  margin-top: 50px;
+  font-size: 11px;
+  color: #ffffff;
+}
+
+@media (max-width: 48rem) {
+  #card {
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #card .card__content .card__text {
+    padding: 5px;
+    margin-left: 0;
+  }
+  #card .card__content .card__text h1 {
+    font-size: 30px;
+  }
+  #card .card__content .card__text p {
+    font-size: 14px;
+  }
+  #card .card__content .card__text .card__list li {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  #card .card__content .card__text .card__list .card__icon {
+    margin-right: 15px;
+  }
+  #card .card__content .card__text #signupForm input {
+    width: 20px;
+  }
+}
+@media (max-width: 30rem) {
+  body {
+    height: 100%;
+  }
+  #card {
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #card .card__content {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  #card .card__content .card__text {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #card .card__content .card__text h1 {
+    font-size: 40px;
+  }
+  #card .card__content .card__text p {
+    font-size: 17px;
+  }
+  #card .card__content .card__text .card__list li {
+    padding-bottom: 5px;
+    font-size: 17px;
+    padding-right: 20px;
+  }
+  #card .card__content .card__image {
+    order: -1;
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 0 0 20px 20px;
+  }
+  #card #successCard {
+    position: fixed;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  #card #successCard .successCard__icon {
+    margin-top: 100px;
+    width: 50px;
+    height: 50px;
+  }
+  #card #successCard h1 {
+    font-size: 40px;
+  }
+  #card #successCard p {
+    margin-right: 80px;
+    font-size: 15px;
+  }
+  #card #successCard .sucessCard__button {
+    margin-top: 150px;
+  }
+  .attribution {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

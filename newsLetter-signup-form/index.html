@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/styles.css">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <!-- Reusable SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="tick-icon" viewBox="0 0 21 21">
+      <g fill="none">
+        <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/>
+        <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/>
+      </g>
+    </symbol>
+  </svg>
+  <main>
+    <div id="card">
+      <div class="card__content">
+        <div class="card__text">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="card__list">
+            <li><svg width="17" height="17" class="card__icon"><use href="#tick-icon"></use></svg>Product discovery and building what matters</li>
+            <li><svg width="17" height="17" class="card__icon"><use href="#tick-icon"></use></svg>Measuring to ensure updates are a success</li>
+            <li><svg width="17" height="17" class="card__icon"><use href="#tick-icon"></use></svg>And much more!</li>
+          </ul>
+          <form id="signupForm">
+            <div>
+              <span>
+                <label for="email">Email address</label>
+                <div class="formField__message"></div>
+              </span>
+              <input type="text" id="email" name="email" placeholder="email@company.com">
+            </div>
+            
+            <button id="signupForm__button" type="submit">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+        <img class="card__image" src="./assets/images/illustration-sign-up-desktop.svg">
+      </div>
+
+      <div id="successCard" style="display: none;">
+        <svg width="17" height="17" class="successCard__icon"><use href="#tick-icon"></use></svg>
+        <h1>Thanks for subscribing!</h1>
+            <p>
+                A confirmation email has been sent to <b>{email}</b>.
+                Please open it and click the button inside to confirm your subscription.
+            </p>
+            <button onclick="location.reload()" class="sucessCard__button">
+                Dismiss message
+            </button>
+      </div>
+      
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Praise Waweru</a>.
+    </div>
+  </main>
+  <script src="./JS/script.js"></script>
+</body>
