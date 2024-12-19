@@ -78,16 +78,16 @@ button:hover {
   flex-direction: column;
   gap: 5px;
 }
-#card .card__content .card__text #signupForm div span {
+#card .card__content .card__text #signupForm div div {
   display: flex;
   position: relative;
   margin-bottom: 4px;
 }
-#card .card__content .card__text #signupForm div span label {
+#card .card__content .card__text #signupForm div div label {
   font-size: 12px;
   font-weight: 700;
 }
-#card .card__content .card__text #signupForm div span .formField__message {
+#card .card__content .card__text #signupForm div div .formField__message {
   font-size: 12px;
   font-weight: 700;
   position: absolute;
