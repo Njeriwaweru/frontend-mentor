@@ -5,7 +5,7 @@
 ## Welcome! 👋
 
 # Links
-Live Site []
+Live Site [https://newsletter-signup-form-seven.vercel.app/]
 
 Users can be able to:
 
