@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+// PRIMARY COLORS
+$blue: #5847eb;
+$work: #ff8c66;
+$play: #56c2e6;
+$study: #ff5c7c;
+$exercise: #4acf81;
+$social: #7536d3;
+$selfCare: #f1c65b;
+
+// NEUTRAL COLORS
+$veryDarkBlue: #0f1424;
+$darkBlue: #1c1f4a;
+$desaturatedBlue: #6f76c8;
+$paleBlue: #bdc1ff;
+
+$fontSize: 18px;
+$fontFamily: "Rubik", serif;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $veryDarkBlue;
+    font-family: $fontFamily;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.header{
+    margin-top: 60px;
+    width: 100vw;
+    background-color: $darkBlue;
+    border-radius: 15px;
+    .header__image{
+        background-color: $blue;
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 15px;
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        h1{
+            color: $paleBlue;
+            font-weight: 300;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        p{
+            color: white;
+            font-weight: 300;
+            font-size: 20px;
+        }
+    }
+    .header--list{
+        padding: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        li{
+            list-style-type: none;
+            button{
+                background-color: $darkBlue;
+                border: none;
+                color: $paleBlue;
+                font-weight: 300;
+                font-size: 18px;
+            }
+        }
+        li button:hover{
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+
+@mixin cardDesign() {
+    background-repeat: no-repeat;
+     background-position: top right 10px;
+     background-size: 60px 60px;
+     padding: 35px 0px 0px 0px;
+     border-radius: 15px;
+     display: flex;
+     flex-direction: column;
+}
+
+@mixin cardContentDesign() {
+    background-color: $darkBlue;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #383d88f6;
+    }
+    .title-image-wrapper{
+        display: flex;
+        justify-content: space-between;
+        .card-image{
+            width: 20px;
+            height: 5px;
+            margin-top: 10px;
+        }
+    }
+    h2{
+        font-weight: 400;
+        font-size: $fontSize;
+        margin-bottom: 8px;
+    }
+    .timeframe{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        p{
+            font-size: 28px;
+            font-weight: 300;
+        }
+        span{
+            color: $paleBlue;
+            font-size: 14px;
+            right: 0;
+        }
+    }
+}
+
+.card{
+    display: grid;
+    margin-top: 30px;
+    border-radius: 15px;
+    &.work{
+        @include cardDesign;
+        background-color: $work;
+        background-image: url('../images/icon-work.svg');
+        .cardContent{
+            @include cardContentDesign;
+        }
+    }
+    &.play{
+        @include cardDesign;
+        background-color: $play;
+        background-image: url('../images/icon-play.svg');
+        .cardContent{
+            @include cardContentDesign;
+        }
+    }
+    &.study{
+        @include cardDesign;
+        background-color: $study;
+        background-image: url('../images/icon-study.svg');
+        .cardContent{
+            @include cardContentDesign;
+        }
+    }
+    &.exercise{
+        @include cardDesign;
+        background-color: $exercise;
+        background-image: url('../images/icon-exercise.svg');
+        .cardContent{
+            @include cardContentDesign;
+        }
+    }
+    &.social{
+        @include cardDesign;
+        background-color: $social;
+        background-image: url('../images/icon-social.svg');
+        .cardContent{
+            @include cardContentDesign;
+        }
+    }
+    &.self-care{
+        @include cardDesign;
+        background-color: $selfCare;
+        background-image: url('../images/icon-self-care.svg');
+        .cardContent{
+            @include cardContentDesign;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    @mixin content{
+        .timeframe{
+            display: flex;
+            flex-direction: column;
+            p{
+                font-size: 30px;
+            }
+        }
+    }
+    #main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+        .header{
+            grid-column: 1 / 2;
+            grid-row: 1 / 4;
+            width: 250px;
+            height: 450px;
+            margin-top: 40px;
+            .header__image{
+                flex-direction: column;
+                height: 250px;
+                img{
+                    width: 70px;
+                    height: 70px;
+                }
+                p{
+                    font-size: 35px;
+                }
+            }
+            .header--list{
+                flex-direction: column;
+                gap: 15px;
+                
+               li{
+               button{
+                font-size: 16px;
+               }
+               }
+            }
+        }
+        #content{
+            display: grid;
+            gap: 20px;
+            .card{
+                width: 200px;
+                &.work{
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 2;
+                    .cardContent{
+                        @include content;
+                    }
+                }
+                &.play{
+                    grid-column: 3 / 4;
+                    grid-row: 1 / 2;
+                    .cardContent{
+                        @include content;
+                    }
+                }
+                &.study{
+                    grid-column: 2 / 3;
+                    grid-row: 2 / 3;
+                    .cardContent{
+                        @include content;
+                    }
+                }
+                &.exercise{
+                    grid-column: 3 / 4;
+                    grid-row: 2 / 3;
+                    .cardContent{
+                        @include content;
+                    }
+                }
+                &.social{
+                    grid-column: 2 / 3;
+                    grid-row: 3 / 4;
+                    .cardContent{
+                        @include content;
+                    }
+                }
+                &.self-care{
+                    grid-column: 3 / 4;
+                    grid-row: 3 / 4;
+                    .cardContent{
+                        @include content;
+                    }
+                }
+            }
+        } 
+    }
+}
+
+@media (min-width: 1024px) {
+    
+    #main{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin-top: 75px;
+        margin-left: 100px;
+        justify-items: center;
+        width: 100%;
+        .header{
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            height: 420px;
+        }
+        #content{
+            display: grid;
+            .card{
+                justify-self: center;
+                &.work{
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 2;
+                }
+                &.play{
+                    grid-column: 3 / 4;
+                    grid-row: 1 / 2;
+                }
+                &.study{
+                    grid-column: 4 / 5;
+                    grid-row: 1 / 2;
+                }
+                &.exercise{
+                    grid-column: 2 / 3;
+                    grid-row: 2 / 3;
+                }
+                &.social{
+                    grid-column: 3 / 4;
+                    grid-row: 2 / 3;
+                }
+                &.self-care{
+                    grid-column: 4 / 5;
+                    grid-row: 2 / 3;
+                }
+            }
+        }
+    }
+}
