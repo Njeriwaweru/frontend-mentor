@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     populateCards(data, timeframe)
                 });
             });
-            populateCards(data, "daily")
+            populateCards(data, "weekly")
         } catch (error) {
             console.error("Error fetching the data:", error);
         } 
